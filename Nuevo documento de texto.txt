@@ -1,0 +1,52 @@
+import logo from './logo.svg';
+import './App.css';
+
+function  Viñeta(props)
+{
+return(
+  <div>
+    <ul>
+        <li>{props.valor1}</li>
+        <li>{props.valor2}</li>
+        <li>{props.valor3}</li>
+      </ul>
+  </div>
+);
+}
+
+
+
+function Viñetas_html(){
+  return(
+   <div>
+      <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+      </ul>
+    </div>);
+}
+
+const valores=["a","b","c"];
+
+const llenar=valores.map((valores) => 
+
+  <li> {valores}</li>
+);
+
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        Viñetas react
+        <Viñeta valor1="a" valor2="b" valor3="c"/>
+        Viñeta html
+        <Viñetas_html/>
+        <ul>{llenar}</ul>
+      </header>
+    </div>
+  );
+}
+
+export default App;
